@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    //    "noImplicitAny": false,
+    //    "strictNullChecks": false,
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "files": [
+    "./lib/util.ts"
+  ]
+}
