@@ -1,0 +1,29 @@
+{
+  "name": "@andy-lib/effect",
+  "version": "1.0.4",
+  "description": "Generic effect library",
+  "scripts": {
+    "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
+    "bundle": "rimraf dist && node ./node_modules/@andy-lib/build/build-module.js effect umd && node ./node_modules/@andy-lib/build/build-module.js effect es && tsc",
+    "postbundle": "node ./node_modules/@andy-lib/build/cleanup-files.js",
+    "build": "npm run bundle && npm run copy",
+    "publish": "cd ./dist && npm publish"
+  },
+  "keywords": [],
+  "author": "Andrew Anisimov <anisimov.new@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@andy-lib/build": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy-a-o/andy-lib.git"
+  },
+  "main": "effect.umd.js",
+  "jsnext:main": "effect.es.js",
+  "module": "effect.es.js",
+  "types": "effect.d.ts",
+  "dependencies": {
+    "@andy-lib/util": "^1.0.4"
+  }
+}
