@@ -4,8 +4,6 @@
     "module": "es2015",
     "sourceMap": true,
     "moduleResolution": "node",
-    //    "noImplicitAny": false,
-    //    "strictNullChecks": false,
     "declaration": true,
     "outDir": "./dist"
   },

@@ -12,3 +12,6 @@ node_modules
 # IDEs and editors
 .idea
 *.iml
+
+# logs
+npm-debug.log
