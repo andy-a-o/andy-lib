@@ -1,0 +1,11 @@
+{
+  "name": "@andy-lib/build",
+  "version": "1.0.0",
+  "description": "Build scripts",
+  "author": "Andrew Anisimov <anisimov.new@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy-a-o/andy-lib.git"
+  }
+}
