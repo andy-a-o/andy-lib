@@ -1,0 +1,30 @@
+{
+  "name": "@andy-lib/profiler",
+  "version": "1.0.0",
+  "description": "Client-side profiling module",
+  "scripts": {
+    "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
+    "bundle": "rimraf dist && node ./node_modules/@andy-lib/build/build-module.js profiler umd && node ./node_modules/@andy-lib/build/build-module.js profiler es && tsc",
+    "postbundle": "node ./node_modules/@andy-lib/build/cleanup-files.js",
+    "build": "npm run bundle && npm run copy",
+    "publish": "cd ./dist && npm publish"
+  },
+  "keywords": [],
+  "author": "Andrew Anisimov <anisimov.new@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@andy-lib/build": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy-a-o/andy-lib.git"
+  },
+  "main": "profiler.umd.js",
+  "jsnext:main": "profiler.es.js",
+  "module": "profiler.es.js",
+  "types": "profiler.d.ts",
+  "dependencies": {
+    "@andy-lib/server": "^1.0.0",
+    "@andy-lib/util": "^1.0.2"
+  }
+}
