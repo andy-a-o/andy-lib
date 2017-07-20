@@ -1,6 +1,6 @@
 {
   "name": "@andy-lib/server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Server side comminication library",
   "scripts": {
     "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
