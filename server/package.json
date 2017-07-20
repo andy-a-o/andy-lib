@@ -1,0 +1,32 @@
+{
+  "name": "@andy-lib/server",
+  "version": "1.0.0",
+  "description": "Server side comminication library",
+  "scripts": {
+    "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
+    "bundle": "rimraf dist && node ./node_modules/@andy-lib/build/build-module.js server umd && node ./node_modules/@andy-lib/build/build-module.js server es && tsc",
+    "postbundle": "node ./node_modules/@andy-lib/build/cleanup-files.js",
+    "build": "npm run bundle && npm run copy",
+    "publish": "cd ./dist && npm publish"
+  },
+  "author": "Andrew Anisimov <anisimov.new@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@andy-lib/build": "^1.0.2",
+    "del": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.4.6",
+    "typescript": "^2.4.1"
+  },
+  "main": "server.umd.js",
+  "jsnext:main": "server.es.js",
+  "module": "server.es.js",
+  "types": "server.d.ts",
+  "dependencies": {
+    "@andy-lib/util": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy-a-o/andy-lib.git"
+  }
+}
