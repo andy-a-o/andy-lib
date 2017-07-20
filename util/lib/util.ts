@@ -13,3 +13,5 @@ export * from "./src/Random";
 export * from "./src/ScriptLoader";
 export * from "./src/Strings";
 export * from "./src/Timer";
+export * from "./src/UrlEncoder";
+export * from "./src/UrlParser";
