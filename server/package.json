@@ -12,11 +12,7 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.2",
-    "del": "^3.0.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-typescript2": "^0.4.6",
-    "typescript": "^2.4.1"
+    "@andy-lib/build": "^1.0.2"
   },
   "main": "server.umd.js",
   "jsnext:main": "server.es.js",

@@ -1,6 +1,6 @@
 {
   "name": "@andy-lib/util",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Commonly-used utility classes",
   "scripts": {
     "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
@@ -13,12 +13,7 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.2",
-    "del": "^3.0.0",
-    "rollup": "^0.45.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-typescript2": "^0.4.6",
-    "typescript": "^2.4.1"
+    "@andy-lib/build": "^1.0.2"
   },
   "repository": {
     "type": "git",
