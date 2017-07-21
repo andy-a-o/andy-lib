@@ -13,7 +13,7 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.3"
+    "@andy-lib/build": "^1.0.5"
   },
   "repository": {
     "type": "git",

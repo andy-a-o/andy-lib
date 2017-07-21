@@ -12,7 +12,7 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.2"
+    "@andy-lib/build": "^1.0.5"
   },
   "main": "server.umd.js",
   "jsnext:main": "server.es.js",

@@ -1,6 +1,6 @@
 {
   "name": "@andy-lib/effect",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Generic effect library",
   "scripts": {
     "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
@@ -13,7 +13,7 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.3"
+    "@andy-lib/build": "^1.0.5"
   },
   "repository": {
     "type": "git",
