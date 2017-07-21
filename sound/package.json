@@ -1,0 +1,32 @@
+{
+  "name": "@andy-lib/sound",
+  "version": "1.0.0",
+  "description": "Sound playback tools",
+  "scripts": {
+    "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
+    "bundle": "rimraf dist && node ./node_modules/@andy-lib/build/build-module.js sound umd && node ./node_modules/@andy-lib/build/build-module.js sound es && tsc",
+    "postbundle": "node ./node_modules/@andy-lib/build/cleanup-files.js",
+    "build": "npm run bundle && npm run copy",
+    "publish": "cd ./dist && npm publish"
+  },
+  "keywords": [],
+  "author": "Andrew Anisimov <anisimov.new@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@andy-lib/build": "^1.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy-a-o/andy-lib.git"
+  },
+  "main": "sound.umd.js",
+  "jsnext:main": "sound.es.js",
+  "module": "sound.es.js",
+  "types": "sound.d.ts",
+  "dependencies": {
+    "@andy-lib/effect": "^1.0.5",
+    "@andy-lib/profiler": "^1.0.0",
+    "@andy-lib/server-resources": "^1.0.0",
+    "@andy-lib/util": "^1.0.4"
+  }
+}
