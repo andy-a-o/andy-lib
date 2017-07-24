@@ -1,6 +1,6 @@
 {
   "name": "@andy-lib/profiler",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Client-side profiling module",
   "scripts": {
     "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
@@ -13,7 +13,7 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.5"
+    "@andy-lib/build": "^1.0.6"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   "module": "profiler.es.js",
   "types": "profiler.d.ts",
   "dependencies": {
-    "@andy-lib/server": "^1.0.0",
-    "@andy-lib/util": "^1.0.2"
+    "@andy-lib/server": "^1.0.3",
+    "@andy-lib/util": "^1.0.8"
   }
 }

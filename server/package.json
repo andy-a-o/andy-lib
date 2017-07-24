@@ -1,6 +1,6 @@
 {
   "name": "@andy-lib/server",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Server side comminication library",
   "scripts": {
     "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
@@ -12,14 +12,14 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.5"
+    "@andy-lib/build": "^1.0.6"
   },
   "main": "server.umd.js",
   "jsnext:main": "server.es.js",
   "module": "server.es.js",
   "types": "server.d.ts",
   "dependencies": {
-    "@andy-lib/util": "^1.0.2"
+    "@andy-lib/util": "^1.0.8"
   },
   "repository": {
     "type": "git",

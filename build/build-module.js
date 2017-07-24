@@ -1,3 +1,4 @@
+var fs = require("fs");
 var rollup = require("rollup");
 var resolve = require("rollup-plugin-node-resolve");
 var typescript = require("rollup-plugin-typescript2");
@@ -8,6 +9,9 @@ var destFile = nameLibrary + "." + format + ".js";
 
 console.log("Building library " + destFile);
 
+var pkg = JSON.parse(fs.readFileSync("package.json"));
+var externals = Object.keys(pkg.dependencies || {});
+
 rollup.rollup({
     entry: "lib/" + nameLibrary + ".ts",
     plugins: [
@@ -16,7 +20,8 @@ rollup.rollup({
             module: true,
             main: true
         })
-    ]
+    ],
+    external: externals
 }).then(function (bundle) {
     bundle.write({
         moduleName: nameLibrary,

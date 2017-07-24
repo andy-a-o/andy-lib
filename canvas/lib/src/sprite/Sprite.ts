@@ -1,9 +1,6 @@
-import {RenderObject, RenderObjectConfig} from "./RenderObject";
+import {AlignType, RenderObject, RenderObjectConfig, VerticalAlignType} from "./RenderObject";
 import {Profiler} from "@andy-lib/profiler";
 import {AugmentedHTMLImageElement, ErrorReporter, ImageResourceConfig} from "@andy-lib/server-resources";
-
-export type AlignType = "left" | "center" | "right";
-export type VerticalAlignType = "top" | "middle" | "bottom";
 
 export interface SpriteConfig extends RenderObjectConfig, ImageResourceConfig {
     align?: AlignType | undefined;

@@ -6,6 +6,9 @@ import {Profiler} from "@andy-lib/profiler";
 import {Rect} from "../util/Rect";
 import {ErrorReporter} from "@andy-lib/server-resources";
 
+export type AlignType = "left" | "center" | "right";
+export type VerticalAlignType = "top" | "bottom" | "middle";
+
 export interface RenderObjectConfig extends DisplayObjectConfig {
     /**
      * Rotation degree.

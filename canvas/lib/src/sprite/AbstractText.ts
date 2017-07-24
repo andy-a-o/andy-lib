@@ -1,11 +1,8 @@
-import {RenderObject, RenderObjectConfig} from "./RenderObject";
+import {AlignType, RenderObject, RenderObjectConfig, VerticalAlignType} from "./RenderObject";
 import {Template} from "../util/Template";
 import {Strings} from "@andy-lib/util";
 import {Profiler} from "@andy-lib/profiler";
 import {Rect} from "../util/Rect";
-
-export type AlignType = "left" | "center" | "right";
-export type VerticalAlignType = "top" | "bottom" | "middle";
 
 export interface PaddingConfig {
     x: number;

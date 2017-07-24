@@ -1,6 +1,6 @@
 {
   "name": "@andy-lib/canvas",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Canvas drawing tools",
   "scripts": {
     "copy": "node ./node_modules/@andy-lib/build/copy-package.js && node ./node_modules/@andy-lib/build/cleanup-package.js",
@@ -13,7 +13,7 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.5"
+    "@andy-lib/build": "^1.0.6"
   },
   "repository": {
     "type": "git",
@@ -24,12 +24,12 @@
   "module": "canvas.es.js",
   "types": "canvas.d.ts",
   "dependencies": {
-    "@andy-lib/effect": "^1.0.5",
-    "@andy-lib/profiler": "^1.0.0",
-    "@andy-lib/server": "^1.0.1",
-    "@andy-lib/server-resources": "^1.0.0",
-    "@andy-lib/sound": "^1.0.0",
-    "@andy-lib/util": "^1.0.4",
+    "@andy-lib/effect": "^1.0.8",
+    "@andy-lib/profiler": "^1.0.2",
+    "@andy-lib/server": "^1.0.3",
+    "@andy-lib/server-resources": "^1.0.2",
+    "@andy-lib/sound": "^1.0.3",
+    "@andy-lib/util": "^1.0.8",
     "@types/jquery": "^3.2.9",
     "jquery": "^3.2.1"
   }

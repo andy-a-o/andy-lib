@@ -1,6 +1,6 @@
-import {md5hex} from "@andy-lib/util";
 import {RequestFactoryListener} from "./RequestFactory";
 import {Request, RequestListener} from "./Request";
+import {md5} from '@andy-lib/util';
 
 export class RequestVerifier implements RequestFactoryListener, RequestListener {
     private salt: string;
@@ -16,7 +16,7 @@ export class RequestVerifier implements RequestFactoryListener, RequestListener 
     onRequestBeforeSend(request: Request) {
         const data = request.getData();
         if (data) {
-            const f = md5hex;
+            const f = md5;
             const s = this.salt;
             const h = String.fromCharCode.apply(null, RequestVerifier.HEADER);
             request.addHeader(h, f(f(JSON.stringify(data)) + s));
