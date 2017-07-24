@@ -357,7 +357,7 @@ export class EventDispatcher {
         if ((i < 0) || (i >= gridSizeX) || (j < 0) || (j >= gridSizeY)) {
             return null;
         }
-        return this.grid[i][j];
+        return this.grid[i][j] || Entry.empty;
     }
 
     private initGrid() {
@@ -494,6 +494,8 @@ class Entry {
     private readonly droppable = new OrderedSprites();
     private readonly cursor = new OrderedSprites();
     private readonly tip = new OrderedSprites();
+
+    public static readonly empty = new Entry(-1, -1);
 
     constructor(private i: number, private j: number) {
         for (let k = 0, n = eventHandlers.length; k < n; ++k) {
