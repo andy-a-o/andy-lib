@@ -489,6 +489,44 @@ export class EventDispatcher {
     }
 }
 
+class OrderedSprites {
+    private readonly spriteMap: DisplayObject[] = [];
+
+    insert(s: DisplayObject) {
+        const sprites = this.spriteMap;
+        if (sprites.indexOf(s) >= 0) {
+            return;
+        }
+        if (sprites.length > 0) {
+            const z1 = getZIndex(s);
+            for (let i = 0, n = sprites.length; i < n; ++i) {
+                const z2 = getZIndex(sprites[i]);
+                if (Arrays.compare(z1, z2) >= 0) {
+                    sprites.splice(i, 0, s);
+                    return;
+                }
+            }
+        }
+        sprites.push(s);
+    }
+
+    select(x: number, y: number) {
+        const sprites = this.spriteMap;
+        for (let k = 0, n = sprites.length; k < n; ++k) {
+            const s = sprites[k];
+            if (s.mouseCheck(x, y)) {
+                return s;
+            }
+        }
+        return null;
+    }
+
+    remove(s: DisplayObject) {
+        Arrays.remove(this.spriteMap, s);
+        clearZIndexCache(s);
+    }
+}
+
 class Entry {
     private readonly draggable = new OrderedSprites();
     private readonly droppable = new OrderedSprites();
@@ -544,44 +582,6 @@ class Entry {
         if (s.getTip()) {
             this.tip.remove(s);
         }
-    }
-}
-
-class OrderedSprites {
-    private readonly spriteMap: DisplayObject[] = [];
-
-    insert(s: DisplayObject) {
-        const sprites = this.spriteMap;
-        if (sprites.indexOf(s) >= 0) {
-            return;
-        }
-        if (sprites.length > 0) {
-            const z1 = getZIndex(s);
-            for (let i = 0, n = sprites.length; i < n; ++i) {
-                const z2 = getZIndex(sprites[i]);
-                if (Arrays.compare(z1, z2) >= 0) {
-                    sprites.splice(i, 0, s);
-                    return;
-                }
-            }
-        }
-        sprites.push(s);
-    }
-
-    select(x: number, y: number) {
-        const sprites = this.spriteMap;
-        for (let k = 0, n = sprites.length; k < n; ++k) {
-            const s = sprites[k];
-            if (s.mouseCheck(x, y)) {
-                return s;
-            }
-        }
-        return null;
-    }
-
-    remove(s: DisplayObject) {
-        Arrays.remove(this.spriteMap, s);
-        clearZIndexCache(s);
     }
 }
 
