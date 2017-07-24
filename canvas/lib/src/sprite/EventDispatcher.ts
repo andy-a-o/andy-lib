@@ -2,6 +2,7 @@ import {Arrays, Listeners} from "@andy-lib/util";
 import {Profiler} from "@andy-lib/profiler";
 import {DisplayObject} from "./DisplayObject";
 import {Tooltip} from "./ui/Tooltip";
+import $ from 'jquery';
 
 const eventMap = {
     click: "onClick",

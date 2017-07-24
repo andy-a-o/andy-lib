@@ -6,6 +6,7 @@ import {Profiler} from "@andy-lib/profiler";
 import {EventDispatcher, MouseEventListener} from "./EventDispatcher";
 import {KeyHandler, KeyRegistry} from "./KeyRegistry";
 import {Tooltip} from "./ui/Tooltip";
+import $ from 'jquery';
 
 export interface StageListener {
     onSpriteAdded?(stage: Stage, sprite: DisplayObject);

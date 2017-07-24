@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export interface KeyHandler {
     onKeyPressed(c: string);
 }

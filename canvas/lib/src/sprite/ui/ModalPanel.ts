@@ -4,6 +4,7 @@ import {DisplayObject} from "../DisplayObject";
 import {MouseEventListener} from "../EventDispatcher";
 import {Button, ButtonConfig} from "./Button";
 import {Stage} from "../Stage";
+import $ from 'jquery';
 
 export interface ModalPanelConfig extends ShapeConfig {
 }
