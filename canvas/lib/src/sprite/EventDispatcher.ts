@@ -355,7 +355,7 @@ export class EventDispatcher {
         const i = Math.floor(x / this.sx);
         const j = Math.floor(y / this.sy);
         if ((i < 0) || (i >= gridSizeX) || (j < 0) || (j >= gridSizeY)) {
-            return null;
+            return Entry.empty;
         }
         return this.grid[i][j] || Entry.empty;
     }
