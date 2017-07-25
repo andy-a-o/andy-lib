@@ -410,7 +410,7 @@ export abstract class DisplayObject extends Rect {
             if ((this.xDrawn !== undefined) && (this.yDrawn !== undefined)) {
                 if ((this.xDrawn !== this.x) || (this.yDrawn !== this.y)) {
                     rect.includeRect(this);
-                    rect.include(this.xDrawn, this.yDrawn, this.w, this.h);
+                    rect.include(this.xDrawn, this.yDrawn, this.wDrawn, this.hDrawn);
                 }
             }
         }
