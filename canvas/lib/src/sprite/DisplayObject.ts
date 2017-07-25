@@ -111,6 +111,8 @@ export abstract class DisplayObject extends Rect {
 
     private xDrawn: number | undefined;
     private yDrawn: number | undefined;
+    private wDrawn: number | undefined;
+    private hDrawn: number | undefined;
 
     constructor(res: DisplayObjectConfig) {
         super(res.x, res.y, res.w, res.h);
@@ -449,6 +451,8 @@ export abstract class DisplayObject extends Rect {
             if (this.canMove) {
                 this.xDrawn = this.x;
                 this.yDrawn = this.y;
+                this.wDrawn = this.w;
+                this.hDrawn = this.h;
             }
         }
         this.drawChildren(ctx, rect);
