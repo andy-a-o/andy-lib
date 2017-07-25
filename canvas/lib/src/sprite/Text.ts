@@ -66,7 +66,7 @@ export class Text extends AbstractText {
         res.baseline && (this.textBaseline = res.baseline);
         switch (res.align) {
             case "left":
-                this.drawX = this.paddingLeft;
+                this.drawX = this.paddingLeft || 0;
                 this.textAlign = "start";
                 break;
             default:
@@ -75,7 +75,7 @@ export class Text extends AbstractText {
                 this.textAlign = "center";
                 break;
             case "right":
-                this.drawX = this.w - this.paddingRight;
+                this.drawX = this.w - (this.paddingRight || 0);
                 this.textAlign = "end";
                 break;
         }

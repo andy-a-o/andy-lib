@@ -47,7 +47,7 @@ export class BitmapText extends AbstractText {
     }
 
     private getOffsetX_left(line: string): number {
-        return Math.floor(this.paddingLeft / this.fontScale);
+        return Math.floor((this.paddingLeft || 0) / this.fontScale);
     }
 
     private getOffsetX_center(line: string): number {
