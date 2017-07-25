@@ -97,7 +97,7 @@ export class Tooltip extends Rectangle implements DisplayObjectListener, TimerLi
     }
 
     adjustTo(cursorX: number, cursorY: number) {
-        if (!this.owner || (this.adjustedTo == this.owner)) {
+        if (!this.owner || (this.adjustedTo == this.owner && !this.owner.isCanMove())) {
             return;
         }
         const canvas = this.getStage().getCanvas();
