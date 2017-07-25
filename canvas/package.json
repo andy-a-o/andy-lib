@@ -13,7 +13,8 @@
   "author": "Andrew Anisimov <anisimov.new@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@andy-lib/build": "^1.0.6"
+    "@andy-lib/build": "^1.0.6",
+    "@types/jquery": "^3.2.9"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,6 @@
     "@andy-lib/server-resources": "^1.0.2",
     "@andy-lib/sound": "^1.0.3",
     "@andy-lib/util": "^1.0.8",
-    "@types/jquery": "^3.2.9",
     "jquery": "^3.2.1"
   }
 }
