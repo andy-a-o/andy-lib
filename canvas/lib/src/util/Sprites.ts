@@ -74,8 +74,8 @@ export class Sprites {
         const offset = res.offset || {};
         return {
             ...<any>res,
-            x: offset.x !== undefined ? parent.x + offset.x : offset.r !== undefined ? parent.r - res.w : res.x,
-            y: offset.y !== undefined ? parent.y + offset.y : offset.b !== undefined ? parent.b - res.h : res.y
+            x: offset.x !== undefined ? parent.x + offset.x : offset.r !== undefined ? parent.r - res.w - offset.r : res.x,
+            y: offset.y !== undefined ? parent.y + offset.y : offset.b !== undefined ? parent.b - res.h - offset.b : res.y
         };
     }
 
