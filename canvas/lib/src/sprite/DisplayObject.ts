@@ -41,10 +41,10 @@ export interface OffsetConfig {
 }
 
 export interface DisplayObjectConfig {
-    x: number;
-    y: number;
-    w: number;
-    h: number;
+    x?: number;
+    y?: number;
+    w?: number;
+    h?: number;
     offset?: OffsetConfig | undefined;
     id?: number | undefined;
     z?: number | undefined;
