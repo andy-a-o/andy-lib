@@ -1,7 +1,7 @@
 import {AbstractShape, ShapeConfig} from "./AbstractShape";
 
 export interface CircleConfig extends ShapeConfig {
-    radius: number;
+    radius?: number;
     angle?: {
         /**
          * Angle in radians
