@@ -106,6 +106,9 @@ export class Group extends RenderObject {
 
     protected renderChildren(ctx: CanvasRenderingContext2D, rect: Rect) {
         const children = this.getChildren();
+        if (!children) {
+            return;
+        }
         for (let i = 0, n = children.length; i < n; ++i) {
             this.renderChild(ctx, children[i], rect);
         }
