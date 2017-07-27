@@ -127,6 +127,9 @@ export class Group extends RenderObject {
                 c.drawRect(ctx, src, dst);
                 if (!(c instanceof Group)) {
                     const children = c.getChildren();
+                    if (!children) {
+                        return;
+                    }
                     for (let i = 0, n = children.length; i < n; ++i) {
                         this.renderChild(ctx, children[i], rect);
                     }
@@ -148,6 +151,9 @@ export class Group extends RenderObject {
         c.addObjectListener(this.childrenListener);
         if (!(c instanceof Group)) {
             const children = c.getChildren();
+            if (!children) {
+                return;
+            }
             for (let i = 0, n = children.length; i < n; ++i) {
                 this.registerChild(children[i]);
             }
@@ -159,6 +165,9 @@ export class Group extends RenderObject {
         c.removeObjectListener(this.childrenListener);
         if (!(c instanceof Group)) {
             const children = c.getChildren();
+            if (!children) {
+                return;
+            }
             for (let i = 0, n = children.length; i < n; ++i) {
                 this.unregisterChild(children[i]);
             }
