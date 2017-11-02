@@ -15,9 +15,13 @@ export class Template {
         let text = this.template;
         for (let key in params) {
             if (params.hasOwnProperty(key)) {
-                text = text.replace(`\${${key}}`, params[key]);
+                text = text.replace(new RegExp(escapeRegExp(`\${${key}}`), 'g'), params[key]);
             }
         }
         return text;
     }
+}
+
+function escapeRegExp(str) {
+    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 }
