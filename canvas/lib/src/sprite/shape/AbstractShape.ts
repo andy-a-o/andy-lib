@@ -1,8 +1,7 @@
-import {RenderObject} from "../RenderObject";
+import {RenderObject, RenderObjectConfig} from "../RenderObject";
 import {Profiler} from "@andy-lib/profiler";
-import {DisplayObjectConfig} from "../DisplayObject";
 
-export interface ShapeConfig extends DisplayObjectConfig {
+export interface ShapeConfig extends RenderObjectConfig {
     color?: string | undefined;
     border?: { color?: string | undefined, width?: number | undefined } | undefined;
 }
