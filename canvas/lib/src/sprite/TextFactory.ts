@@ -8,7 +8,7 @@ export class TextFactory {
     protected constructor() {
     }
 
-    static create(res: AbstractTextConfig): AbstractText {
+    static create(res: BitmapTextConfig | TextConfig): AbstractText {
         if (res.font && res.font && BitmapFontRegistry.find(res.font.name)) {
             return new BitmapText(<BitmapTextConfig>res);
         }
